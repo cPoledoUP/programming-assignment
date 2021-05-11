@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UP Mindanao - Academic Units | Printf</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kreon&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="jquery/jquery-3.6.0.min.js"></script>
+    <script src="jquery/jquery-ui.js"></script>
+
+    <script>
+        $(function() {
+            $("#selectmenu").selectmenu({
+                change: function() {
+                    window.location.href=this.value;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<nav>
+    <div class="header"><img src="img/origlogonew.png" alt="UP Logo"></div>
+    <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="academic-units.html" id="current">ACADEMIC UNITS</a></li>
+        <li><a href="academic-programs.html">ACADEMIC PROGRAMS</a></li>
+        <li><a href="sign-up.html">SIGN-UP</a></li>
+    </ul>
+</nav>
+	<div class="acadu">
+    <label><h2>Colleges of UP Mindanao</h2></label>  
+		<select id="selectmenu">
+	  <option value="#" selected="selected">Select a Department</option>
+      <option value="hss.html">Humanities and Social Sciences</option>  
+      <option value="csm.html">Science and Mathematics</option>  
+      <option value="som.html">School of Management</option>      
+    </select>
+</div>
+
+</body>
+</html>

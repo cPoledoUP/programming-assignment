@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UP Mindanao - SOM | Printf</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kreon&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="jquery/jquery-3.6.0.min.js"></script>
+    <script src="jquery/jquery-ui.js"></script>
+    <script src="test.js"></script>
+
+    <script>
+        $(function() {
+            $("#selectmenu").selectmenu({
+                change: function() {
+                    window.location.href=this.value;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<nav>
+    <div class="header"><img src="img/origlogonew.png" alt="UP Logo"></div>
+    <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="academic-units.html" id="current">ACADEMIC UNITS</a></li>
+        <li><a href="academic-programs.html">ACADEMIC PROGRAMS</a></li>
+        <li><a href="sign-up.html">SIGN-UP</a></li>
+    </ul>
+</nav>
+
+
+	<div class="acadu">
+    <label><h2>Colleges of UP Mindanao</h2></label>  
+		<select id="selectmenu">
+	  <option value="#" selected="selected">Select a Department</option>
+	  <option value="hss.html">Humanities and Social Sciences</option>  
+      <option value="csm.html">Science and Mathematics</option>  
+      <option value="som.html">School of Management</option>  
+       </select>
+</div>
+ 
+ <div class="acadu2">
+   <h2>School of Management</h2>
+        <h3>Programs and Courses</h3>
+      <dd><p> PhD By Research </p>
+        <p>MASTER IN MANAGEMENT</p>
+        <p>BS AGRIBUSINESS ECONOMICS</p>
+        </dd>
+        <h3> Faculty Members </h3>
+  <dd> <p>ACOPIADO,	Imee Marie A. </p>
+   <p>ACUÑA,	Thaddeus R.</p>
+   <p>AGUINALDO,	Roxanne T.</p>
+   <p>ALVIOLA,	Pedro IV A.</p>
+   <p>CALATRAVA,	Lemuel B.</p>
+   <p>CASTRO,	Miko Mariz C.</p>
+   <p>DIGAL, Larry N.</p>
+   <p>GOMEZ, Aurelia Luzviminda V.</p>
+   <p>HUALDA,	Luis Antonio T.</p>
+   <p>LAORDEN,	Nikko L.</p>
+   <p>PLACENCIA,	Shemaiah Gail P.</p>
+   <p>ROMO,	Glory Dee A.</p>
+   <p>SARMIENTO,	Jon Marx P.</p>
+   <p>SHUCK,	Vlademir A.</p>
+   	</dd>
+   <h3>Pool of Lecturers</h3>
+   
+  <dd>  <p>ACOSTA,	Maria Belen S.</p>
+   <p>ANICETO-GUINOMLA,	Marianne Esther G.</p>
+   <p>BiñAS,	Junmar M.</p>
+   <p>CRUZ,	Marvin M.</p>
+   <p>DACALAÑO,	Jimmy R.</p>
+   <p>DURANA,	Annalee D.</p>
+   <p>EBARLE,	Jocip L.</p>
+   <p>HERNANDEZ,	Maria Corazon A.</p>
+   <p>JOSOL,	Charlene P.</p>
+   <p>LAO,	Francis E.</p>
+   <p>MENDOZA,	Lionel D.</p>
+   <p>MONTIFLOR,	Marilou O.</p>
+   <p>PABULARCON,	Liza N.</p>
+   <p>PARABA,	Rene S.</p>
+   <p>PARREÑO,	Liza Elsie E.</p>
+   <p>TEO,	Roberto U.</p>
+   <p>TRAJE,	Adonis M.</p>
+       </dd>
+   
+</div>
+</body>
+</html>

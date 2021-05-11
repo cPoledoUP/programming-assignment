@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UP Mindanao - Sign Up | Printf</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kreon&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="jquery/jquery-3.6.0.min.js"></script>
+    <script src="jquery/jquery-ui.js"></script>
+
+    <script>
+        $(function() {
+            var provinces = [
+                "Agusan del Norte",
+                "Agusan del Sur",
+                "Bukidnon",
+                "Compostela Valley",
+                "Cotabato",
+                "Davao del Norte",
+                "Davao del Sur",
+                "Davao Occidental",
+                "Davao Oriental",
+                "Lanao del Norte",
+                "Lanao del Sur",
+                "Maguindanao",
+                "Misamis Occidental",
+                "Misamis Oriental",
+                "Sarangani",
+                "South Cotabato",
+                "Sultan Kudarat",
+                "Surigao del Norte",
+                "Surigao del Sur",
+                "Zamboanga del Norte",
+                "Zamboanga del Sur",
+                "Zamboanga Sibugay",
+                "Basilan",
+                "Camiguin",
+                "Dinagat Islands",
+                "Sulu",
+                "Tawi-Tawi"
+            ];
+
+            $(".control-group").controlgroup();
+            $(".cbradio").checkboxradio();
+            $("#datepicker").datepicker();
+            $("#autocomplete").autocomplete({
+                source: provinces
+            });
+            $("#spinner").spinner();
+            $("#submit").button();
+            $("button").click(function() {
+                var fname = $("#fname").val();
+                var lname = $("#lname").val();
+                var mname = $("#mname").val();
+                var gender = $("input[name='gender']:checked").val();
+                var dateOfBirth = $("#datepicker").val();
+                var province = $("#autocomplete").val();
+                var yearLevel = $("#spinner").val();
+
+                if (fname == "" || lname == "" || gender == "" || dateOfBirth == "" || province == "" || yearLevel == "") {
+                    window.alert("Please input all the fields (Middle name is optional).");
+                } else {
+                    var userDetails = "Name: " + lname + ", " + fname + " " + mname + "\nGender: " + gender + "\nDate of Birth: " + dateOfBirth + "\nProvince: " + province + "\nYear Level: " + yearLevel;
+
+                    var blob = new Blob([userDetails], {
+                        type:"application/json;utf - 8"
+                    })
+                    var userLink = document.createElement("a");
+                    userLink.setAttribute("download", lname + ", " + fname + " " + mname + ".txt");
+                    userLink.setAttribute("href", window.URL.createObjectURL(blob));
+                    userLink.click();
+                } 
+            });
+        });
+    </script>
+</head>
+<body>
+<nav>
+    <div class="header"><img src="img/origlogonew.png" alt="UP Logo"></div>
+    <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="academic-units.html">ACADEMIC UNITS</a></li>
+        <li><a href="academic-programs.html">ACADEMIC PROGRAMS</a></li>
+        <li><a href="sign-up.html" id="current">SIGN-UP</a></li>
+    </ul>
+</nav>
+
+<fieldset>
+    <legend>Sign Up</legend>
+    <p>Name</p>
+    <div class="control-group">
+        <input type="text" name="fname" id="fname" placeholder="First Name">
+        <input type="text" name="lname" id="lname" placeholder="Last Name">
+        <input type="text" name="mname" id="mname" placeholder="Middle Name">
+    </div>
+    <p>Gender</p>
+    <input class="cbradio" type="radio" name="gender" id="male" value="male" checked><label for="male">Male</label>
+    <input class="cbradio" type="radio" name="gender" id="female" value="female"><label for="female">Female</label>
+    <p>Date of Birth</p>
+    <input type="text" name="date" id="datepicker">
+    <p>Province</p>
+    <input type="text" name="province" id="autocomplete">
+    <p>Year Level in UP Mindanao</p>
+    <input type="text" name="yearlevel" id="spinner">
+    <p></p>
+    <button id="submit">Submit</button>
+</fieldset>
+</body>
+</html>

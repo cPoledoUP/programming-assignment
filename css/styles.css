@@ -1,0 +1,67 @@
+body {
+    font-family: sans-serif;
+}
+
+h2, a {
+    font-family: 'Kreon', serif;
+}
+
+h2 {
+    color: darkgreen;
+}
+
+.header {
+    height: auto;
+    padding: 25px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header img {
+    width: 100%;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0; 
+    padding: 0;
+    display: flex;
+    width: 100%;
+    background-color: rgb(136, 30, 32);
+}
+
+nav ul li {
+    padding: 3px 10px;
+}
+
+nav ul li a {
+    color: rgb(240, 240, 240);
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+#current {
+    color: orange;
+}
+
+/* index.html styles */
+address, #tabs-3 p{
+    text-align: center;
+}
+
+
+.acadu {
+  border-style:ridge;
+  margin: auto;
+  text-align: center;
+  padding: 25px
+}
+
+.acadu2 {
+  border-style: ridge;
+  margin: auto;
+  padding: 50px;
+  
+}
