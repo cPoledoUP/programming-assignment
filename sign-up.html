@@ -8,12 +8,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Kreon&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="css/styles.css">
     <script src="jquery/jquery-3.6.0.min.js"></script>
     <script src="jquery/jquery-ui.js"></script>
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
 
     <script>
         $(function() {
@@ -82,15 +82,40 @@
     </script>
 </head>
 <body>
-<nav>
-    <div class="header"><img src="img/origlogonew.png" alt="UP Logo"></div>
-    <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="academic-units.html">ACADEMIC UNITS</a></li>
-        <li><a href="academic-programs.html">ACADEMIC PROGRAMS</a></li>
-        <li><a href="sign-up.html" id="current">SIGN-UP</a></li>
-    </ul>
+<div class="container">
+<div class="row justify-content-md-center">
+<div class="col col-sm-12">
+
+<!-- Header and Navigation Bar -->
+
+<img src="img/origlogonew.png" class="header img-fluid" alt="UP Logo" width="100%">
+
+<nav class="navbar navbar-expand-sm navbar-dark">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">UP Mindanao</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-md-end" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="academic-units.html">ACADEMIC UNITS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="academic-programs.html">ACADEMIC PROGRAMS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="sign-up.html">SIGN-UP</a>
+            </li>
+        </ul>
+    </div>
+    </div>
 </nav>
+
+<!-- Main Content -->
 
 <fieldset>
     <legend>Sign Up</legend>
@@ -112,5 +137,8 @@
     <p></p>
     <button id="submit">Submit</button>
 </fieldset>
+</div>
+</div>
+</div>
 </body>
 </html>

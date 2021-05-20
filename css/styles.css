@@ -11,18 +11,14 @@ h2 {
 }
 
 .header {
-    height: auto;
-    padding: 25px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 20px 0;
 }
 
-.header img {
-    width: 100%;
-    height: auto;
+.navbar {
+    background-color: rgb(136, 30, 32);
 }
 
+/*
 nav ul {
     list-style: none;
     margin: 0; 
@@ -45,9 +41,10 @@ nav ul li a {
 #current {
     color: orange;
 }
+*/
 
 /* index.html styles */
-address, #tabs-3 p{
+address, #tabs-3, #tabs-2{
     text-align: center;
 }
 
