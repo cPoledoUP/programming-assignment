@@ -55,7 +55,7 @@
             });
             $("#spinner").spinner();
             $("#submit").button();
-            $("button").click(function() {
+            $("#submit").click(function() {
                 var fname = $("#fname").val();
                 var lname = $("#lname").val();
                 var mname = $("#mname").val();
@@ -116,27 +116,28 @@
 </nav>
 
 <!-- Main Content -->
-
-<fieldset>
-    <legend>Sign Up</legend>
-    <p>Name</p>
+<div class="row justify-content-center">
+<fieldset class="col-md-3 col-sm-5">
+    <legend class="form-label">Sign Up</legend>
+    <p class="form-label">Name</p>
     <div class="control-group">
-        <input type="text" name="fname" id="fname" placeholder="First Name">
-        <input type="text" name="lname" id="lname" placeholder="Last Name">
-        <input type="text" name="mname" id="mname" placeholder="Middle Name">
+        <input type="text" name="fname" id="fname" placeholder="First Name"><br>
+        <input type="text" name="lname" id="lname" placeholder="Last Name"><br>
+        <input type="text" name="mname" id="mname" placeholder="Middle Name"><br>
     </div>
-    <p>Gender</p>
+    <p class="form-label">Gender</p>
     <input class="cbradio" type="radio" name="gender" id="male" value="male" checked><label for="male">Male</label>
     <input class="cbradio" type="radio" name="gender" id="female" value="female"><label for="female">Female</label>
-    <p>Date of Birth</p>
+    <p class="form-label">Date of Birth</p>
     <input type="text" name="date" id="datepicker">
-    <p>Province</p>
+    <p class="form-label">Province</p>
     <input type="text" name="province" id="autocomplete">
-    <p>Year Level in UP Mindanao</p>
+    <p class="form-label">Year Level in UP Mindanao</p>
     <input type="text" name="yearlevel" id="spinner">
     <p></p>
     <button id="submit">Submit</button>
 </fieldset>
+</div>
 </div>
 </div>
 </div>
